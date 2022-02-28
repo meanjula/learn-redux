@@ -16,7 +16,7 @@ const AddTodo = () => {
       [name]: value,
     }));
   };
-
+  // action is object whenever change input item called dispatch
   const addHandler = (e) => {
     e.preventDefault();
     console.log(todo);
@@ -30,11 +30,11 @@ const AddTodo = () => {
     <form onSubmit={addHandler} className={classes.input}>
       <div>
         <label>Title</label>
-        <input type="text" onChange={changeHandler} />
+        <input type="text" onChange={changeHandler} name="title" />
       </div>
       <div>
         <label>Task</label>
-        <input type="text" onChange={changeHandler} />
+        <input type="text" onChange={changeHandler} name="task" />
       </div>
       <Button type="submit">Add Task</Button>
     </form>
